@@ -5,6 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      live
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -15,13 +25,37 @@
 
       <h1 class="govuk-heading-xl">Role information</h1>
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="/previous-roles" method="post">
 
-        <p>[Insert question content here]</p>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="role">
+            Role
+          </label>
+          <input class="govuk-input" id="role" name="role" type="text" spellcheck="true">
+        </div>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="home-location">
+            Home location
+          </label>
+          <input class="govuk-input" id="home-location" name="home-location" type="text" spellcheck="true">
+        </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="work-location">
+            Work location
+          </label>
+          <input class="govuk-input" id="work-location" name="work-location" type="text" spellcheck="true">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="grade">
+            Grade
+          </label>
+          <input class="govuk-input" id="grade" name="grade" type="text" spellcheck="true">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save & continue</button>
 
       </form>
 
