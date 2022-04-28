@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Kit
+Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,27 +15,67 @@
     </span>
   </p>
 </div>
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-xl">Strenghts & development priorities</h1>
-
-      <form class="form" action="/career-aspirations" method="post">
-
-        <p>[Insert question content here]</p>
-
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-      </form>
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Strenghts & development priorities</h1>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+          Summary of your development priorities?
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        What do you need for your career aspirations (e.g. build leadership capabilities, development of line management ability, specialised knowledge or functional/technical skills)?
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+          Summary of your key strengths?
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        What do you consider to be your 3 key strengths that have been identified over your career?
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          First key strength
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Second key strength
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Third key strength
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+      </div>
+    </div>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+          What centrally coordinated activtiies would help your development??
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        For instance, managed moves, leadership learning, technical learning mentoring, support for applications eg SLS, HPDS
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <form class="form" action="/career-aspirations" method="post">
+      <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
+    </form>
+
   </div>
+</div>
 
 {% endblock %}
