@@ -22,16 +22,17 @@ Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Ki
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Strenghts & development priorities</h1>
+    <h1 class="govuk-heading-xl">Strengths & development priorities</h1>
     <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
           Summary of your development priorities?
         </label>
       </h1>
-      <div id="more-detail-hint" class="govuk-hint">
-        What do you need for your career aspirations (e.g. build leadership capabilities, development of line management ability, specialised knowledge or functional/technical skills)?
-      </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <form class="form" action="/career-aspirations" method="post">
+        <div id="more-detail-hint" class="govuk-hint">
+          What do you need for your career aspirations (e.g. build leadership capabilities, development of line management ability, specialised knowledge or functional/technical skills)?
+        </div>
+        <textarea class="govuk-textarea" id="development-summary" name="development-summary" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
     <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
@@ -45,19 +46,19 @@ Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Ki
         <label class="govuk-label" for="event-name">
           First key strength
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="key-strength-one" name="key-strength-one" type="text">
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Second key strength
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="key-strength-two" name="key-strength-two" type="text">
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Third key strength
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="key-strength-three" name="key-strength-three" type="text">
       </div>
     </div>
     <div class="govuk-form-group">
@@ -68,11 +69,9 @@ Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Ki
       <div id="more-detail-hint" class="govuk-hint">
         For instance, managed moves, leadership learning, technical learning mentoring, support for applications eg SLS, HPDS
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <textarea class="govuk-textarea" id="developmental-activities" name="developmental-activities" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
-
-    <form class="form" action="/career-aspirations" method="post">
-      <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
+    <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
     </form>
 
   </div>

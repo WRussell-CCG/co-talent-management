@@ -22,35 +22,40 @@ Education, qualifications & training – {{ serviceName }} – GOV.UK Prototype 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Education, qualifications & training</h1>
+
+    <form class="form" action="strengths-development-priorities" method="post">
+
     <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="professional-membership">
           Professional membership?
         </label>
       </h1>
       <div id="more-detail-hint" class="govuk-hint">
         Do not include personal or financial information, like your National Insurance number or credit card details.
       </div>
-      <textarea class="govuk-input" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <textarea class="govuk-input" id="professional-membership" name="professional-membership" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
+
     <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="qualifications">
           Qualifications?
         </label>
       </h1>
       <div id="more-detail-hint" class="govuk-hint">
         Please include details of all relevant qualifications & accreditation.
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <textarea class="govuk-textarea" id="qualifications" name="qualifications" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
+
     <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="future-qualifications">
           Future qualifications?
         </label>
       </h1>
       <div id="more-detail-hint" class="govuk-hint">
         Are you currently undertaking any qualifications (including apprenticeships)?
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <textarea class="govuk-textarea" id="future-qualifications" name="future-qualifications" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
@@ -61,20 +66,20 @@ Education, qualifications & training – {{ serviceName }} – GOV.UK Prototype 
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+            <input class="govuk-radios__input" id="considering-future-qualifications" name="considering-future-qualifications" type="radio" value="Yes">
+            <label class="govuk-label govuk-radios__label" for="considering-future-qualifications">
               Yes
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            <input class="govuk-radios__input" id="considering-future-qualifications" name="considering-future-qualifications" type="radio" value="No">
+            <label class="govuk-label govuk-radios__label" for="considering-future-qualifications">
               No
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+            <input class="govuk-radios__input" id="considering-future-qualifications" name="considering-future-qualifications" type="radio" value="Maybe">
+            <label class="govuk-label govuk-radios__label" for="considering-future-qualifications">
               Maybe
             </label>
           </div>
@@ -90,9 +95,9 @@ Education, qualifications & training – {{ serviceName }} – GOV.UK Prototype 
       <div id="more-detail-hint" class="govuk-hint">
         Are you currently currently or previousley involved in any development programmes, departmental talen schemes etc?
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      <textarea class="govuk-textarea" id="development-programmes" name="development-programmes" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
-    <form class="form" action="/strengths-development-priorities" method="post">
+
       <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
     </form>
   </div>

@@ -21,132 +21,684 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-
     <h1 class="govuk-heading-xl">Check your answers before sending your return</h1>
-<!--This is a comment. Comments are not displayed in the browser-->
-    <h2 class="govuk-heading-m">Personal information</h2>
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['first-name'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="personal-information">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Last name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['last-name'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="personal-information">
-            Change
-            <span class="govuk-visually-hidden"> date of birth</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Department
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['department'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="personal-information">
-            Change
-            <span class="govuk-visually-hidden"> contact information</span>
-          </a>
-        </dd>
-    </dl>
-
-    <h2 class="govuk-heading-m">Application details</h2>
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Previous application number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          502135326
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> previous application number</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Licence type
-        </dt>
-        <dd class="govuk-summary-list__value">
-          For personal use
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> licence type</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Home address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          72 Guild Street
-          <br>London
-          <br>SE23 6FH
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> home address</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Licence period
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Valid for 6 months
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> licence period</span>
-          </a>
-        </dd>
-      </div>
-    </dl>
-
-    <h2 class="govuk-heading-m">Now send your application</h2>
-
-    <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-
     <form action="/confirmation" method="post" novalidate>
 
+      <!--PERSONAL INFORMATION-->
+      <h2 class="govuk-heading-m">Personal information</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['first-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal-information">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Last name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['last-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="personal-information">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}
+            <br>{{ data['address-line-2'] }}
+            <br>{{ data['address-town'] }}
+            <br>{{ data['address-postcode'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--CURRENT ROLE-->
+      <h2 class="govuk-heading-m">Current role</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Department
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['department'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="role-information">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="role-information">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Work location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['work-location'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="role-information">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Grade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['grade'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="role-information">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--PREVIOUS ROLE ONE-->
+      <h2 class="govuk-heading-m">Previous roles</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-company-one'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="previous-role-1">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-one'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-one-start-day'] }}
+            {{ data['previous-role-one-start-month'] }}
+            {{ data['previous-role-one-start-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            End date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-one-end-day'] }}
+            {{ data['previous-role-one-end-month'] }}
+            {{ data['previous-role-one-end-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-one-supporting'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--PREVIOUS ROLE TWO-->
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-company-two'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="previous-role-1">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-two'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-two-start-day'] }}
+            {{ data['previous-role-two-start-month'] }}
+            {{ data['previous-role-two-start-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            End date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-two-end-day'] }}
+            {{ data['previous-role-two-end-month'] }}
+            {{ data['previous-role-two-end-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-two-supporting'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--PREVIOUS ROLE THREE-->
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-company-three'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="previous-role-1">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-three'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-three-start-day'] }}
+            {{ data['previous-role-three-start-month'] }}
+            {{ data['previous-role-three-start-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            End date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-three-end-day'] }}
+            {{ data['previous-role-three-end-month'] }}
+            {{ data['previous-role-three-end-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-three-supporting'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--PREVIOUS ROLE FOUR-->
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-company-four'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="previous-role-1">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-four'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-four-start-day'] }}
+            {{ data['previous-role-four-start-month'] }}
+            {{ data['previous-role-four-start-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            End date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-four-end-day'] }}
+            {{ data['previous-role-four-end-month'] }}
+            {{ data['previous-role-four-end-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-four-supporting'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--EDUCATION QUALIFICATIONS AND TRAINING-->
+      <h2 class="govuk-heading-m">Education, qualifications & training</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Professional membership
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['professional-membership'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="education-qualifications-training">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Qualifications
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['qualifications'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="education-qualifications-training">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Future qualifications
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['future-qualifications'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="education-qualifications-training">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Considering qualifications?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['considering-future-qualifications'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="education-qualifications-training">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Considering qualifications?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['development-programmes'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="education-qualifications-training">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--STRENGTHS AND DEVELOPMENT-->
+      <h2 class="govuk-heading-m">Strengths and development</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Summary
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['development-summary'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="strengths-development-priorities">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            First key strenght
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['key-strength-one'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="strengths-development-priorities">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Second key strenght
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['key-strength-two'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="strengths-development-priorities">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Third key strenght
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['key-strength-three'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="strengths-development-priorities">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Development activities
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['developmental-activities'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="strengths-development-priorities">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--CAREER ASPIRATIONS-->
+      <h2 class="govuk-heading-m">Career aspirations</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Next role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['next-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-aspirations">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Anticipated move
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['expected-timing'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-aspirations">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Long-term aspirations
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['long-term-aspirations'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-aspirations">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Willing to relocate
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['relocation'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-aspirations">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional information
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['career-summary'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-aspirations">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Career support?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['career-advice'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-aspirations">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!--SUBMIT INFORMATION-->
+      <h2 class="govuk-heading-m">Now send your application</h2>
+      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
       <input type="hidden" name="answers-checked" value="true">
-
       <button type="submit" class="govuk-button" data-module="govuk-button">
-        Accept and send
+        Confirm and send
       </button>
-
     </form>
-
   </div>
 </div>
 {% endblock %}
