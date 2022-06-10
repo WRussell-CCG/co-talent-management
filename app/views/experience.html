@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Experience overview – {{ serviceName }} – GOV.UK Prototype Kit
+Experience overview – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,27 +15,351 @@
     </span>
   </p>
 </div>
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-xl">Experience overview</h1>
-
-      <form class="form" action="/education-qualifications-training" method="post">
-
-        <p>[Insert question content here]</p>
-
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-      </form>
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="more-detail">
+          Experience overview
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Please indicate below how much experience you feel you have in relation to the specified areas.
+      </div>
     </div>
+
+    <form class="form" action="/education-qualifications-training" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="policy-er-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            Policy and ER
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="policy-er" name="policy-er" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="policy-er">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="policy-er" name="policy-er" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="policy-er">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="policy-er" name="policy-er" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="policy-er">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="policy-er" name="policy-er" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="policy-er">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="hr-operations-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              HR operations
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hr-operations" name="hr-operations" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="hr-operations">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hr-operations" name="hr-operations" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="hr-operations">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hr-operations" name="hr-operations" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="hr-operations">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hr-operations" name="phr-operations" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="hr-operations">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="learning-talent-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              Learning and talent development
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="learning-talent" name="learning-talent" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="learning-talent">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="learning-talent" name="learning-talent" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="learning-talent">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="learning-talent" name="learning-talent" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="learning-talent">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="learning-talent" name="learning-talent" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="learning-talent">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="reward-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              Reward
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reward" name="reward" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="reward">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reward" name="reward" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="lreward">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reward" name="reward" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="reward">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reward" name="reward" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="reward">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="od-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              OD&D
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="od" name="od" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="od">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="od" name="od" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="od">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="od" name="od" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="od">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="od" name="od" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="od">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="hrbp-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              HRBP
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hrbp" name="hrbp" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="hrbp">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hrbp" name="hrbp" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="hrbp">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hrbp" name="hrbp" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="hrbp">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hrbp" name="hrbp" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="hrbp">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="diversity-inclusion-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              Diversity and inclusion
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="diversity-inclusion" name="diversity-inclusion" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="diversity-inclusion">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="diversity-inclusion" name="diversity-inclusion" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="diversity-inclusion">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="diversity-inclusion" name="diversity-inclusion" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="diversity-inclusion">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="diversity-inclusion" name="diversity-inclusion" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="diversity-inclusion">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="casework-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              Casework
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="casework" name="casework" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="casework">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="casework" name="casework" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="casework">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="casework" name="casework" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="casework">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="casework" name="casework" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="casework">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="swfp-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              SWFP
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="swfp" name="swfp" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="swfp">
+                None
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="swfp" name="swfp" type="radio" value="some">
+              <label class="govuk-label govuk-radios__label" for="swfp">
+                Some
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="swfp" name="swfp" type="radio" value="extensive">
+              <label class="govuk-label govuk-radios__label" for="swfp">
+                Extensive
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="swfp" name="swfp" type="radio" value="expert">
+              <label class="govuk-label govuk-radios__label" for="swfp">
+                Expert
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

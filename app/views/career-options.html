@@ -1,0 +1,268 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--pink">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not a full service. It is not production code and you might experience problems.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Career options</h1>
+
+    <form class="form" action="/check-answers" method="post">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="interventions-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Career planning support
+      </h1>
+    </legend>
+    <div id="interventions-hint" class="govuk-hint">
+      Are you currently using, or have you used in the last 12 months, any of the following talent interventions to support you in considering and planning your career?
+    </div>
+    <div id="interventions-hint" class="govuk-hint">
+      Select all that apply.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Line manager">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Talent/Career conversations with your line manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Learning development">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Learning and Development
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Mentoring">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Mentoring
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Coaching">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Coaching
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Sponsorship">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Sponsorship
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Loans">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Loans/interchanges/fellowships
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Secondments">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Secondments
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Shadowing">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Job shadowing
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Voulnteering">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Voulnteering
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="9 box grid">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          9 box grid conversations
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="External networks">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          External networks
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="None">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          None
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Would you consider a secondment opportunity as part of your career journey?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="secondment-opportunity" name="secondment-opportunity" type="radio" value="Within 2 years">
+              <label class="govuk-label govuk-radios__label" for="secondment-opportunity">
+                Yes, within the next 2 years
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="secondment-opportunity" name="secondment-opportunity" type="radio" value="Within 5 years">
+              <label class="govuk-label govuk-radios__label" for="secondment-opportunity">
+                Yes, within the next 5 years
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="secondment-opportunity" name="secondment-opportunity" type="radio" value="Planned">
+              <label class="govuk-label govuk-radios__label" for="secondment-opportunity">
+                Yes, have one already planned
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="secondment-opportunity" name="secondment-opportunity" type="radio" value="Already completed">
+              <label class="govuk-label govuk-radios__label" for="secondment-opportunity">
+                Yes, have already completed one
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="secondment-opportunity" name="secondment-opportunity" type="radio" value="Not at present ">
+              <label class="govuk-label govuk-radios__label" for="secondment-opportunity">
+                Not at present 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Department loan opportunities
+            </h1>
+          </legend>
+          <div id="interventions-hint" class="govuk-hint">
+            I believe that I have the opportunity to progress my career across the Civil Service which could include a loan with another Government department?
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="loan" name="loan" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="loan">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="loan" name="loan" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="loan">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Would you consider moving profession/ department?
+            </h1>
+          </legend>
+          <div id="interventions-hint" class="govuk-hint">
+            Would you consider career progression opportunities across the Civil Service which could include movement to another Government professions/function?
+          </div>
+          <div id="cross-movement" class="govuk-hint">
+            Select the profession/ function that is of interest. You can select 'None' if this is not of interest to you.
+          </div>
+        <select class="govuk-select govuk-!-width-full" id="cross-movement" name="cross-movement">
+          <option value="-" selected>Select</option>
+          <option value="Analysis">Analysis</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Communications">Communications</option>
+          <option value="Consular">Consular</option>
+          <option value="Counter fraud">Counter fraud</option>
+          <option value="Debt management">Debt management</option>
+          <option value="Digital, date and technology">Digital, date and technology</option>
+          <option value="Finance">Finance</option>
+          <option value="HR">HR</option>
+          <option value="Intelligence analysis">Intelligence analysis</option>
+          <option value="Internal audit">Internal audit</option>
+          <option value="International trade">International trade</option>
+          <option value="Knowledge and information management">Knowledge and information management</option>
+          <option value="Legal">Legal</option>
+          <option value="Operational delivery">Operational delivery</option>
+          <option value="Policy">Policy</option>
+          <option value="Project delivery">Project delivery</option>
+          <option value="Property">Property</option>
+          <option value="Security">Security</option>
+          <option value="Science and engineering">Science and engineering</option>
+          <option value="Something else">Something else</option>
+          <option value="None">None</option>
+        </select>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              You next career move - are you focusing on?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Lateral move">
+              <label class="govuk-label govuk-radios__label" for="focus">
+                Lateral move, at existing grade
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Promotion">
+              <label class="govuk-label govuk-radios__label" for="focus">
+                Promotion
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Both">
+              <label class="govuk-label govuk-radios__label" for="focus">
+                Lateral move and promotion
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
