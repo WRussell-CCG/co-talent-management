@@ -19,29 +19,91 @@ Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      Create a Talent Portal account
+      Create account
     </h1>
-
-    <p class="govuk-body">
-      You must be employed by, or represent, a public sector organisation.
-    </p>
-    <p class="govuk-body">
-      Use your work email address to create an account. We use this to check that you are part of a public sector organisation.
-    </p>
-    <p class="govuk-body">
-      We will send an account activation email to this address. You will then be able to set your password.
-    </p>
     <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
-          Email address
+      <label class="govuk-label" for="full-name">
+        Full name
+      </label>
+      <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Email address
+      </label>
+      <div id="email-hint" class="govuk-hint">
+        Use your work email address to create an account. We use this to check that you are part of a public sector organisation.
+      </div>
+      <div id="email-hint" class="govuk-hint">
+        We will send an account activation email to this address. You will then be able to set your password.
+      </div>
+      <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="subject">
+        Where do you currently work?
+      </label>
+      <div id="subject-hint" class="govuk-hint">
+        What hint text do we want to show in this space?
+      </div>
+      <select class="govuk-select govuk-!-width-full" id="subject" name="subject" aria-describedby="subject-hint">
+        <option value="choose" selected>Choose </option>
+        <option value="cabinet-office">Cabinet Office</option>
+        <option value="department-for-education">Department for Education</option>
+        <option value="department-for-transport">Department for Transport</option>
+        <option value="department-for-work-and-pensions">Department for Work & Pensions</option>
+        <option value="home-office">Home Office</option>
+        <option value="ministry-of-justice">Ministry of Justice</option>
+      </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <label class="govuk-label" for="subject">
+          Where do you currently work?
         </label>
-      </h1>
-      <input class="govuk-input" id="event-name" name="event-name" type="text">
+        <div id="subject-hint" class="govuk-hint">
+          Now what hint text do we want to show in this space?
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="profession-analysis" name="profession" type="radio" value="Analysis">
+            <label class="govuk-label govuk-radios__label" for="profession-analysis">
+              Analysis
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="profession-finance" name="profession" type="radio" value="Finance">
+            <label class="govuk-label govuk-radios__label" for="profession-finance">
+              HR
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="profession-hr" name="profession" type="radio" value="HR">
+            <label class="govuk-label govuk-radios__label" for="profession-hr">
+              Finance
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="profession-operations" name="profession" type="radio" value="Operations">
+            <label class="govuk-label govuk-radios__label" for="profession-operations">
+              Operations
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="profession-security" name="profession" type="radio" value="Security">
+            <label class="govuk-label govuk-radios__label" for="profession-security">
+              Security
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </div>
 
     <form class="form" action="/email-direct" method="post">

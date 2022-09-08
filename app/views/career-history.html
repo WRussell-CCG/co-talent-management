@@ -22,6 +22,7 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Career history</h1>
+    <p class='govuk-body'>We would like to understand your careers history covering the past five years.</p>
     <form class="form" action="/experience" method="post">
 
       <!--PREVIOUS ROLE ONE 1-->
@@ -35,19 +36,17 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
             </h2>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-            <p class='govuk-body'>This is the content for Writing well for the web.</p>
-
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="previous-company-one">
-                Company
-              </label>
-              <input class="govuk-input" id="previous-company-one" name="previous-company-one" type="text-1" spellcheck="true">
-            </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="previous-role-one">
                 Role
               </label>
               <input class="govuk-input" id="previous-role-one" name="previous-role-one" type="text-1" spellcheck="true">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="previous-company-one">
+                Organisation
+              </label>
+              <input class="govuk-input" id="previous-company-one" name="previous-company-one" type="text-1" spellcheck="true">
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="sort">
@@ -61,42 +60,38 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
               </select>
             </div>
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                  <h1 class="govuk-fieldset__heading">
-                    Start date
-                  </h1>
-                </legend>
-                <div id="dob-hint" class="govuk-hint">
-                  For example, 31 3 1980
-                </div>
-                <div class="govuk-date-input" id="dob">
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-one-start-day" name="previous-role-one-start-day" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-one-start-month" name="previous-role-one-start-month" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="previous-role-one-start-year" name="previous-role-one-start-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
+              <label class="govuk-label" for="sort">
+                Profession
+              </label>
+              <select class="govuk-select govuk-!-width-full" id="previous-role-one-profession" name="previous-role-one-profession">
+                <option value="-" selected>Select</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Commercial and Procurement">Commercial and Procurement</option>
+                <option value="Corporate Finance">Corporate Finance</option>
+                <option value="Communications">Communications</option>
+                <option value="Counter Fraud">Counter Fraud</option>
+                <option value="Digital, Data and Technology">Digital, Data and Technology</option>
+                <option value="Economics">Economics</option>
+                <option value="Finance">Finance</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Internal Audit">Internal Audit</option>
+                <option value="International Trade and Negotiation">International Trade and Negotiation</option>
+                <option value="Knowledge and Information Management">Knowledge and Information Management</option>
+                <option value="Legal">Legal</option>
+                <option value="Medical">Medical</option>
+                <option value="Occupational Psychology">Occupational Psychology</option>
+                <option value="Operational Delivery">Operational Delivery</option>
+                <option value="Operational Research">Operational Research</option>
+                <option value="Planning">Planning</option>
+                <option value="Policy">Policy</option>
+                <option value="Project Management and Delivery">Project Management and Delivery</option>
+                <option value="Property">Property</option>
+                <option value="Science and Engineering">Science and Engineering</option>
+                <option value="Security">Security</option>
+                <option value="Social Research">Social Research</option>
+                <option value="Tax">Tax</option>
+                <option value="Veterinary">Veterinary</option>
+              </select>
             </div>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
@@ -105,6 +100,9 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                     End date
                   </h1>
                 </legend>
+                <div id="dob-hint" class="govuk-hint">
+                  For example, 31 3 1980
+                </div>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -133,12 +131,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
               </fieldset>
             </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="more-detail">
-                Do you want to add any supporting information about the role?
-              </label>
-              <textarea class="govuk-textarea" id="previous-role-one-supporting" name="previous-role-one-supporting" rows="5"></textarea>
-            </div>
           </div>
         </div>
 
@@ -152,13 +144,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
             </h2>
           </div>
           <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-            <p class='govuk-body'>This is the content for Writing well for specialists.</p>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="previous-company-two">
-                Company
-              </label>
-              <input class="govuk-input" id="previous-company-two" name="previous-company-two" type="text-1" spellcheck="true">
-            </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="previous-role-1">
                 Role
@@ -166,53 +151,44 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
               <input class="govuk-input" id="previous-role-two" name="previous-role-two" type="text-1" spellcheck="true">
             </div>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="sort">
-                Industry
+              <label class="govuk-label" for="previous-company-two">
+                Organisation
               </label>
-              <select class="govuk-select govuk-!-width-full" id="previous-role-two-industry" name="previous-role-two-industry">
-                <option value="-" selected>Select</option>
-                <option value="Civil service">Civil service</option>
-                <option value="Public sector">Public sector</option>
-                <option value="Private sector">Private sector</option>
-              </select>
+              <input class="govuk-input" id="previous-company-two" name="previous-company-two" type="text-1" spellcheck="true">
             </div>
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                  <h1 class="govuk-fieldset__heading">
-                    Start date
-                  </h1>
-                </legend>
-                <div id="dob-hint" class="govuk-hint">
-                  For example, 31 3 1980
-                </div>
-                <div class="govuk-date-input" id="dob">
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-two-start-day" name="previous-role-two-start-day" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-two-start-month" name="previous-role-two-start-month" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="previous-role-two-start-year" name="previous-role-two-start-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
+              <label class="govuk-label" for="sort">
+                Profession
+              </label>
+              <select class="govuk-select govuk-!-width-full" id="previous-role-two-profession" name="previous-role-two-profession">
+                <option value="-" selected>Select</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Commercial and Procurement">Commercial and Procurement</option>
+                <option value="Corporate Finance">Corporate Finance</option>
+                <option value="Communications">Communications</option>
+                <option value="Counter Fraud">Counter Fraud</option>
+                <option value="Digital, Data and Technology">Digital, Data and Technology</option>
+                <option value="Economics">Economics</option>
+                <option value="Finance">Finance</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Internal Audit">Internal Audit</option>
+                <option value="International Trade and Negotiation">International Trade and Negotiation</option>
+                <option value="Knowledge and Information Management">Knowledge and Information Management</option>
+                <option value="Legal">Legal</option>
+                <option value="Medical">Medical</option>
+                <option value="Occupational Psychology">Occupational Psychology</option>
+                <option value="Operational Delivery">Operational Delivery</option>
+                <option value="Operational Research">Operational Research</option>
+                <option value="Planning">Planning</option>
+                <option value="Policy">Policy</option>
+                <option value="Project Management and Delivery">Project Management and Delivery</option>
+                <option value="Property">Property</option>
+                <option value="Science and Engineering">Science and Engineering</option>
+                <option value="Security">Security</option>
+                <option value="Social Research">Social Research</option>
+                <option value="Tax">Tax</option>
+                <option value="Veterinary">Veterinary</option>
+              </select>
             </div>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
@@ -221,6 +197,9 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                     End date
                   </h1>
                 </legend>
+                <div id="dob-hint" class="govuk-hint">
+                  For example, 31 3 1980
+                </div>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -249,12 +228,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
               </fieldset>
             </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="more-detail">
-                Do you want to add any supporting information about the role?
-              </label>
-              <textarea class="govuk-textarea" id="previous-role-two-supporting" name="previous-role-two-supporting" rows="5"></textarea>
-            </div>
           </div>
         </div>
 
@@ -268,13 +241,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
             </h2>
           </div>
           <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-            <p class='govuk-body'>This is the content for Know your audience.</p>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="previous-company-three">
-                Company
-              </label>
-              <input class="govuk-input" id="previous-company-three" name="previous-company-three" type="text-1" spellcheck="true">
-            </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="previous-role-1">
                 Role
@@ -282,54 +248,44 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
               <input class="govuk-input" id="previous-role-three" name="previous-role-three" type="text-1" spellcheck="true">
             </div>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="sort">
-                Industry
+              <label class="govuk-label" for="previous-company-three">
+                Organisation
               </label>
-              <select class="govuk-select govuk-!-width-full" id="previous-role-three-industry" name="previous-role-three-industry">
-                <option value="-" selected>Select</option>
-                <option value="Civil service">Civil service</option>
-                <option value="Public sector">Public sector</option>
-                <option value="Private sector">Private sector</option>
-              </select>
+              <input class="govuk-input" id="previous-company-three" name="previous-company-three" type="text-1" spellcheck="true">
             </div>
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                  <h1 class="govuk-fieldset__heading">
-                    Start date
-                  </h1>
-                </legend>
-                <div id="dob-hint" class="govuk-hint">
-                  For example, 31 3 1980
-                </div>
-                <div class="govuk-date-input" id="dob">
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-three-start-day" name="previous-role-three-start-day" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-three-start-month" name="previous-role-three-start-month" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="previous-role-three-start-year" name="previous-role-three-start-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                </div>
-
-              </fieldset>
+              <label class="govuk-label" for="sort">
+                Profession
+              </label>
+              <select class="govuk-select govuk-!-width-full" id="previous-role-three-profession" name="previous-role-three-profession">
+                <option value="-" selected>Select</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Commercial and Procurement">Commercial and Procurement</option>
+                <option value="Corporate Finance">Corporate Finance</option>
+                <option value="Communications">Communications</option>
+                <option value="Counter Fraud">Counter Fraud</option>
+                <option value="Digital, Data and Technology">Digital, Data and Technology</option>
+                <option value="Economics">Economics</option>
+                <option value="Finance">Finance</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Internal Audit">Internal Audit</option>
+                <option value="International Trade and Negotiation">International Trade and Negotiation</option>
+                <option value="Knowledge and Information Management">Knowledge and Information Management</option>
+                <option value="Legal">Legal</option>
+                <option value="Medical">Medical</option>
+                <option value="Occupational Psychology">Occupational Psychology</option>
+                <option value="Operational Delivery">Operational Delivery</option>
+                <option value="Operational Research">Operational Research</option>
+                <option value="Planning">Planning</option>
+                <option value="Policy">Policy</option>
+                <option value="Project Management and Delivery">Project Management and Delivery</option>
+                <option value="Property">Property</option>
+                <option value="Science and Engineering">Science and Engineering</option>
+                <option value="Security">Security</option>
+                <option value="Social Research">Social Research</option>
+                <option value="Tax">Tax</option>
+                <option value="Veterinary">Veterinary</option>
+              </select>
             </div>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
@@ -338,6 +294,9 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                     End date
                   </h1>
                 </legend>
+                <div id="dob-hint" class="govuk-hint">
+                  For example, 31 3 1980
+                </div>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -366,12 +325,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
               </fieldset>
             </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="more-detail">
-                Do you want to add any supporting information about the role?
-              </label>
-              <textarea class="govuk-textarea" id="previous-role-three-supporting" name="previous-role-three-supporting" rows="5"></textarea>
-            </div>
           </div>
         </div>
 
@@ -385,24 +338,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
             </h2>
           </div>
           <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-            <p class='govuk-body'>This is the content for How people read.</p>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="previous-company-four">
-                Company
-              </label>
-              <input class="govuk-input" id="previous-company-four" name="previous-company-four" type="text-1" spellcheck="true">
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="sort">
-                Industry
-              </label>
-              <select class="govuk-select govuk-!-width-full" id="previous-role-four-industry" name="previous-role-four-industry">
-                <option value="-" selected>Select</option>
-                <option value="Civil service">Civil service</option>
-                <option value="Public sector">Public sector</option>
-                <option value="Private sector">Private sector</option>
-              </select>
-            </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="previous-role-1">
                 Role
@@ -410,42 +345,44 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
               <input class="govuk-input" id="previous-role-four" name="previous-role-four" type="text-1" spellcheck="true">
             </div>
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                  <h1 class="govuk-fieldset__heading">
-                    Start date
-                  </h1>
-                </legend>
-                <div id="dob-hint" class="govuk-hint">
-                  For example, 31 3 1980
-                </div>
-                <div class="govuk-date-input" id="dob">
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-four-start-day" name="previous-role-four-start-day" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="previous-role-four-start-month" name="previous-role-four-start-month" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="previous-role-four-start-year" name="previous-role-four-start-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric">
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
+              <label class="govuk-label" for="previous-company-four">
+                Organisation
+              </label>
+              <input class="govuk-input" id="previous-company-four" name="previous-company-four" type="text-1" spellcheck="true">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Profession
+              </label>
+              <select class="govuk-select govuk-!-width-full" id="previous-role-four-profession" name="previous-role-four-profession">
+                <option value="-" selected>Select</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Commercial and Procurement">Commercial and Procurement</option>
+                <option value="Corporate Finance">Corporate Finance</option>
+                <option value="Communications">Communications</option>
+                <option value="Counter Fraud">Counter Fraud</option>
+                <option value="Digital, Data and Technology">Digital, Data and Technology</option>
+                <option value="Economics">Economics</option>
+                <option value="Finance">Finance</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Internal Audit">Internal Audit</option>
+                <option value="International Trade and Negotiation">International Trade and Negotiation</option>
+                <option value="Knowledge and Information Management">Knowledge and Information Management</option>
+                <option value="Legal">Legal</option>
+                <option value="Medical">Medical</option>
+                <option value="Occupational Psychology">Occupational Psychology</option>
+                <option value="Operational Delivery">Operational Delivery</option>
+                <option value="Operational Research">Operational Research</option>
+                <option value="Planning">Planning</option>
+                <option value="Policy">Policy</option>
+                <option value="Project Management and Delivery">Project Management and Delivery</option>
+                <option value="Property">Property</option>
+                <option value="Science and Engineering">Science and Engineering</option>
+                <option value="Security">Security</option>
+                <option value="Social Research">Social Research</option>
+                <option value="Tax">Tax</option>
+                <option value="Veterinary">Veterinary</option>
+              </select>
             </div>
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
@@ -454,6 +391,9 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                     End date
                   </h1>
                 </legend>
+                <div id="dob-hint" class="govuk-hint">
+                  For example, 31 3 1980
+                </div>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -481,12 +421,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                 </div>
               </fieldset>
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="more-detail">
-                Do you want to add any supporting information about the role?
-              </label>
-              <textarea class="govuk-textarea" id="previous-role-four-supporting" name="previous-role-four-supporting" rows="5"></textarea>
             </div>
           </div>
         </div>
