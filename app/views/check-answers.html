@@ -24,57 +24,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
     <h1 class="govuk-heading-xl">Check your answers before sending your return</h1>
     <form action="/confirmation" method="post" novalidate>
 
-      <!--PERSONAL INFORMATION-->
-      <h2 class="govuk-heading-m">Personal information</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['first-name'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="personal-information">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Last name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['last-name'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="personal-information">
-              Change
-              <span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Home address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}
-            <br>{{ data['address-line-2'] }}
-            <br>{{ data['address-town'] }}
-            <br>{{ data['address-postcode'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
       <!--CURRENT ROLE-->
       <h2 class="govuk-heading-m">Current role</h2>
 
@@ -104,6 +53,22 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
             <a href="role-information">
               Change
               <span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['previous-role-one-start-day'] }}
+            {{ data['previous-role-one-start-month'] }}
+            {{ data['previous-role-one-start-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-history">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
             </a>
           </dd>
         </div>
@@ -185,22 +150,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Start date
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-one-start-day'] }}
-            {{ data['previous-role-one-start-month'] }}
-            {{ data['previous-role-one-start-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
             End date
           </dt>
           <dd class="govuk-summary-list__value">
@@ -212,20 +161,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
             <a href="career-history">
               Change
               <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Supporting details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-one-supporting'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
             </a>
           </dd>
         </div>
@@ -263,36 +198,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Industry
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-two-industry'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Start date
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-two-start-day'] }}
-            {{ data['previous-role-two-start-month'] }}
-            {{ data['previous-role-two-start-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
             End date
           </dt>
           <dd class="govuk-summary-list__value">
@@ -304,20 +209,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
             <a href="career-history">
               Change
               <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Supporting details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-two-supporting'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
             </a>
           </dd>
         </div>
@@ -355,36 +246,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Industry
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-three-industry'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Start date
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-three-start-day'] }}
-            {{ data['previous-role-three-start-month'] }}
-            {{ data['previous-role-three-start-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
             End date
           </dt>
           <dd class="govuk-summary-list__value">
@@ -396,20 +257,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
             <a href="career-history">
               Change
               <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Supporting details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-three-supporting'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
             </a>
           </dd>
         </div>
@@ -447,36 +294,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Industry
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-four-industry'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Start date
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-four-start-day'] }}
-            {{ data['previous-role-four-start-month'] }}
-            {{ data['previous-role-four-start-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
             End date
           </dt>
           <dd class="govuk-summary-list__value">
@@ -488,20 +305,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
             <a href="career-history">
               Change
               <span class="govuk-visually-hidden"> home address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Supporting details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['previous-role-four-supporting'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-history">
-              Change
-              <span class="govuk-visually-hidden"> licence period</span>
             </a>
           </dd>
         </div>
@@ -774,15 +577,76 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
+      </dl>
+
+      <!--CAREER OPTIONS-->
+      <h2 class="govuk-heading-m">Career options</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Development activities
+            Palnning support
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['developmental-activities'] }}
+            {{ data['interventions'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="strengths-development-priorities">
+            <a href="career-options">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Considering a secondment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['secondment-opportunity'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-options">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Department loans
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['loan'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-options">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Moving profession/ department
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['cross-movement'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-options">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Focus
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['focus'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="career-options">
               Change
               <span class="govuk-visually-hidden"> previous application number</span>
             </a>
@@ -872,81 +736,6 @@ Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="career-aspirations">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-      <!--CAREER OPTIONS-->
-      <h2 class="govuk-heading-m">Career options</h2>
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Palnning support
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['interventions'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-options">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Considering a secondment
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['secondment-opportunity'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-options">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Department loans
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['loan'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-options">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Moving profession/ department
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['cross-movement'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-options">
-              Change
-              <span class="govuk-visually-hidden"> previous application number</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Focus
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['focus'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="career-options">
               Change
               <span class="govuk-visually-hidden"> previous application number</span>
             </a>

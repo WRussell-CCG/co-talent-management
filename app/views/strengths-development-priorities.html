@@ -28,7 +28,7 @@ Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Ki
           Summary of your development priorities?
         </label>
       </h1>
-      <form class="form" action="/career-aspirations" method="post">
+      <form class="form" action="/career-options" method="post">
         <div id="more-detail-hint" class="govuk-hint">
           What do you need for your career aspirations (e.g. build leadership capabilities, development of line management ability, specialised knowledge or functional/technical skills)?
         </div>
@@ -36,45 +36,71 @@ Strengths & development priorities – {{ serviceName }} – GOV.UK Prototype Ki
     </div>
     <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-          Summary of your key strengths?
+          Your key strengths?
         </label>
       </h1>
       <div id="more-detail-hint" class="govuk-hint">
-        What do you consider to be your 3 key strengths that have been identified over your career?
+        Thinking about the Government Success profiles, what would you consider to be your three main key strengths?
+        <a href="https://www.gov.uk/government/publications/success-profiles">
+          GOV.UK Success profiles
+        </a>
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           First key strength
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="key-strength-one" name="key-strength-one" type="text">
+        <select class="govuk-select govuk-!-width-full" id="key-strength-one" name="key-strength-one">
+          <option value="-" selected>-</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+        </select>
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Second key strength
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="key-strength-two" name="key-strength-two" type="text">
+        <select class="govuk-select govuk-!-width-full" id="key-strength-two" name="key-strength-two">
+          <option value="-" selected>-</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+        </select>
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Third key strength
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="key-strength-three" name="key-strength-three" type="text">
+        <select class="govuk-select govuk-!-width-full" id="key-strength-three" name="key-strength-three">
+          <option value="-" selected>-</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+          <option value="dept">dept</option>
+        </select>
       </div>
-    </div>
-    <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-          What centrally coordinated activtiies would help your development??
-        </label>
-      </h1>
-      <div id="more-detail-hint" class="govuk-hint">
-        For instance, managed moves, leadership learning, technical learning mentoring, support for applications eg SLS, HPDS
-      </div>
-      <textarea class="govuk-textarea" id="developmental-activities" name="developmental-activities" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
     <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
-    </form>
-
   </div>
 </div>
-
 {% endblock %}

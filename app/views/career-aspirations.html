@@ -25,7 +25,14 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
 
     <h1 class="govuk-heading-xl">Career aspirations</h1>
 
-    <form class="form" action="/career-options" method="post">
+    <form class="form" action="/check-answers" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            What are your long-term career aspirations?
+          </label>
+        </h1>
+        <textarea class="govuk-textarea" id="long-term-aspirations" name="long-term-aspirations" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
@@ -47,21 +54,9 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="expected-timing" name="expected-timing" type="radio" value="Within 3 months">
+              <input class="govuk-radios__input" id="expected-timing" name="expected-timing" type="radio" value="6-12 Months">
               <label class="govuk-label govuk-radios__label" for="expected-timing">
-                Within 3 months
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="expected-timing" name="expected-timing" type="radio" value="Within 6 months">
-              <label class="govuk-label govuk-radios__label" for="expected-timing">
-                Within 6 months
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="expected-timing" name="expected-timing" type="radio" value="Within 12 months">
-              <label class="govuk-label govuk-radios__label" for="expected-timing">
-                Within 12 months
+                6 - 12 months
               </label>
             </div>
             <div class="govuk-radios__item">
@@ -79,15 +74,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </fieldset>
       </div>
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-            What are your long-term career aspirations?
-          </label>
-        </h1>
-        <textarea class="govuk-textarea" id="long-term-aspirations" name="long-term-aspirations" rows="5" aria-describedby="more-detail-hint"></textarea>
-      </div>
-
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -122,21 +108,10 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-            Additional information
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          If you said you would be willing to relocate, please describe locations you are willing to be based in, and preferred working patterns (job share, part time etc)
-        </div>
-        <textarea class="govuk-textarea" id="career-summary" name="career-summary" rows="5" aria-describedby="more-detail-hint"></textarea>
-      </div>
-
-      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              Would you like to be contacted by a careers professional to discuss your aspirations?
+              Have you spoken to your line manager about about your next move?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
@@ -155,6 +130,18 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </fieldset>
       </div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            Additional information
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+          If you said you would be willing to relocate, please describe locations you are willing to be based in, and preferred working patterns (job share, part time etc)
+        </div>
+        <textarea class="govuk-textarea" id="career-summary" name="career-summary" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
       <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
     </form>
 
