@@ -23,7 +23,7 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Career options</h1>
+    <h1 class="govuk-heading-xl">Career support and moves</h1>
 
     <form class="form" action="/career-aspirations" method="post">
 
@@ -31,7 +31,7 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
   <fieldset class="govuk-fieldset" aria-describedby="interventions-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h1 class="govuk-fieldset__heading">
-        Career planning support
+        Supporting your career
       </h1>
     </legend>
     <div id="interventions-hint" class="govuk-hint">
@@ -44,7 +44,7 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Line manager">
         <label class="govuk-label govuk-checkboxes__label" for="interventions">
-          Talent/Career conversations with your line manager
+          Career conversations
         </label>
       </div>
       <div class="govuk-checkboxes__item">
@@ -61,25 +61,25 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Sponsorship">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Development schemes">
         <label class="govuk-label govuk-checkboxes__label" for="interventions">
-          Sponsorship
+          Development schemes
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Loans">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Work placement and Interchanges">
         <label class="govuk-label govuk-checkboxes__label" for="interventions">
-          Loans/interchanges/fellowships
+          Work placement and Interchanges
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Secondments">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="External networks">
         <label class="govuk-label govuk-checkboxes__label" for="interventions">
-          Secondments
+          External networks
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Shadowing">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Job shadowing">
         <label class="govuk-label govuk-checkboxes__label" for="interventions">
           Job shadowing
         </label>
@@ -91,9 +91,15 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="External networks">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Sponsoring">
         <label class="govuk-label govuk-checkboxes__label" for="interventions">
-          External networks
+          Sponsoring
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="interventions" name="interventions" type="checkbox" value="Other">
+        <label class="govuk-label govuk-checkboxes__label" for="interventions">
+          Other
         </label>
       </div>
       <div class="govuk-checkboxes__item">
@@ -103,7 +109,6 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
         </label>
       </div>
     </div>
-
   </fieldset>
 </div>
 
@@ -111,7 +116,7 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              Would you consider secondment or loan opportunity as part of your career journey?
+              Would you consider a secondment or loan as part of your career journey?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
@@ -183,19 +188,18 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
   </fieldset>
 </div>
 
-
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              You next career move - are you focusing on?
+              Your next career move is?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Lateral move">
               <label class="govuk-label govuk-radios__label" for="focus">
-                Lateral move, at existing grade
+                Lateral move
               </label>
             </div>
             <div class="govuk-radios__item">
@@ -205,9 +209,15 @@ Career aspirations – {{ serviceName }} – GOV.UK Prototype Kit
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Both">
+              <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Retirement">
               <label class="govuk-label govuk-radios__label" for="focus">
-                Lateral move and promotion
+                Retirement
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="focus" name="focus" type="radio" value="Not considering a move">
+              <label class="govuk-label govuk-radios__label" for="focus">
+                Not considering a move
               </label>
             </div>
           </div>
